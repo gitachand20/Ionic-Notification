@@ -1,0 +1,39 @@
+<ion-header>
+   <ion-navbar>
+      <ion-title>
+         Info Kampus
+      </ion-title>
+   </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+   <ion-fab right bottom>
+    	<button ion-fab mini (click)="addEntry()"><ion-icon name="add"></ion-icon></button>
+   </ion-fab>
+
+   <ion-item>
+      <button
+         class="add"
+         ion-button
+         item-right
+         icon-right
+         margin-bottom
+         color="danger"
+         (click)="lihatInfo()">
+            Lihat Informasi
+      </button>
+   </ion-item>
+
+
+   <ion-item *ngFor="let item of items">
+      <h2>{{ item.judul }} </h2>
+      <button
+         ion-button
+         color="primary"
+         item-right
+         (click)="viewEntry({ record: item })">View</button>
+   </ion-item>
+
+
+</ion-content>

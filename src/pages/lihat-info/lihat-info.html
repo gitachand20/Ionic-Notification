@@ -1,0 +1,21 @@
+<ion-header>
+   <ion-navbar>
+      <ion-title>Info Kampus</ion-title>
+   </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+  <ion-card *ngFor="let item of items">
+    <ion-item color="secondary">
+      <h2>{{ item.judul }}</h2>
+      <p>{{ item.tanggal }}, {{ item.jam }}</p>
+    </ion-item>
+
+    <img src="{{ item.gambar }}">
+
+    <ion-card-content>
+      <p align="justify">{{ item.keterangan }}</p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
